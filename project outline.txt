@@ -1,0 +1,14 @@
+Fix all the "dates" in the database
+
+The priority logic (sorting the tasks)
+
+A function for deleting stuff from the database 
+
+A function to put the deleted stuff in "done tasks" also when a task is done, it should
+put the task in "done tasks" i nthe database
+
+A final function that takes input for action that you want to do (make a task, delete a task, etc..) and does it (and maybe runs in a sort of loop)
+
+
+
+THE UI FOR TODO=> Fix th

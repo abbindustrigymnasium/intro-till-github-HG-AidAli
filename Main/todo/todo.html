@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="sidebar-btn" id="sidebarBtn">
+                <div class="sidebar-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+
+            <div class="toggle-container">
+                <div class="toggle-btn">
+                    <button class="toggle-option active" data-view="table">Table</button>
+                    <button class="toggle-option" data-view="board">Board</button>
+                </div>
+            </div>
+
+            <button class="new-btn" id="newBtn">+ New</button>
+        </header>
+
+        <main class="content">
+            <div id="contentArea">
+                <div class="placeholder">
+                    Your todos will appear here...
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <button class="footer-btn" id="doneDeletedBtn">Done & Deleted</button>
+        </footer>
+    </div>
+
+    <div id="newTaskPopup" class="popup-overlay" style="display: none;">
+        <div class="popup">
+            <button class="popup-close" id="closePopup">×</button>
+            <h3>Create New Task</h3>
+            
+            <div class="form-group">
+                <label>Task name:</label>
+                <input type="text" id="taskNameInput" placeholder="Enter task name">
+            </div>
+
+            <div class="form-group">
+                <label>Priority:</label>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="priority" value="1" checked>
+                        <div class="radio-circle priority-low"></div>
+                        <span class="radio-label">Low</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="priority" value="2">
+                        <div class="radio-circle priority-medium"></div>
+                        <span class="radio-label">Medium</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="priority" value="3">
+                        <div class="radio-circle priority-high"></div>
+                        <span class="radio-label">High</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Status:</label>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="status" value="0" checked>
+                        <div class="radio-circle status-not-started"></div>
+                        <span class="radio-label">Not Started</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="status" value="1">
+                        <div class="radio-circle status-ongoing"></div>
+                        <span class="radio-label">Ongoing</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Date (YYYY-MM-DD):</label>
+                <input type="text" id="taskDateInput" placeholder="2025-12-17">
+            </div>
+
+            <button class="create-btn" id="createTaskBtn">Create Task</button>
+        </div>
+    </div>
+
+    <div id="doneDeletedPopup" class="popup-overlay" style="display: none;">
+        <div class="popup">
+            <button class="popup-close" id="closeDoneDeletedPopup">×</button>
+            <h3>Done & Deleted Tasks</h3>
+            <div class="done-deleted-content" id="doneDeletedContent">
+                <!-- Content will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="todo.js"></script>
+</body>
+</html>

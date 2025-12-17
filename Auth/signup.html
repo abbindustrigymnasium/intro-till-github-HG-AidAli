@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+
+    <link rel="stylesheet" href="signup.css">
+    <script src="https://unpkg.com/pocketbase/dist/pocketbase.umd.js"></script>
+    <script type="module" src="signup.js"></script>
+</head>
+<body>
+
+    <div class="signup-container">
+        <h1>Create Account</h1>
+
+        <form id="signupForm">
+            <div class="input-group">
+                <label>Username</label>
+                <input type="text" id="newUsername" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" id="newPassword" required>
+            </div>
+
+            <div class="input-group">
+                <label>Confirm Password</label>
+                <input type="password" id="confirmPassword" required>
+            </div>
+
+            <button type="submit" class="signup-btn">Sign Up</button>
+        </form>
+
+        <p id="error-msg"></p>
+
+        <p class="login-link">
+            Already have an account? <a href="login.html">Login</a>
+        </p>
+    </div>
+
+</body>
+</html>
